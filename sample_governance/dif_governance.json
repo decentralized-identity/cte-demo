@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://github.com/hyperledger/aries-rfcs/blob/main/concepts/0430-machine-readable-governance-frameworks/context.jsonld"
+  ],
+  "name": "DIF Membership Governance",
+  "version": "1.0",
+  "format": "1.1",
+  "id": "8ebf1e95-556d-4b44-a232-33facf5a3481",
+  "description": "This document describes the governance of DIF membership in a machine readable way.",
+  "last_updated": "2024-06-21",
+  "docs_uri": "https://url-for-docs...",
+  "schemas": [
+    {
+      "id": "uri:example:RuuJwd3JMffNwZ43DcJKN1:2:DIF_Member_Organization:1.4",
+      "name": "DIF Member Organization",
+      "issuer_roles": ["dif"]
+    },
+    {
+      "id": "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIF_Member_Individual:1.0",
+      "name": "DIF Individual Member",
+      "issuer_roles": ["dif", "dif_member_organization"]
+    }
+  ],
+  "participants": {
+    "id": "6af6684c-28ad-41a7-8661-8823bd74314c",
+    "author": "did:web:identity.foundation:demos:sample_dids:dif",
+    "created": "2024-06-21T23:12:19Z",
+    "version": 1,
+    "entries": {
+      "https://identity.foundation/description.schema.json": {
+        "did:web:identity.foundation:demos:sample_dids:dif": {
+          "name": "Decentralized Identity Foundation",
+          "website": "https://identity.foundation/",
+          "email": "membership@identity.foundation"
+        },
+        "did:web:identity.foundation:demos:sample_dids:sample_org": {
+          "name": "Sample Organization",
+          "website": "https://example.com/",
+          "email": "contact@example.com"
+        }
+      },
+      "https://identity.foundation/roles.schema.json": {
+        "did:web:identity.foundation:demos:sample_dids:dif": [
+          {
+            "start": "2024-06-21T23:12:19Z",
+            "role": "dif"
+          }
+        ],
+        "did:web:identity.foundation:demos:sample_dids:sample_org": {
+          "start": "2024-06-21T23:12:19Z",
+          "role": "dif_member_organization"
+        }
+      }
+    }
+  },
+  "roles": {
+    "dif": {
+      "issue": [
+        "uri:example:RuuJwd3JMffNwZ43DcJKN1:2:DIF_Member_Organization:1.4",
+        "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIF_Member_Individual:1.0"
+      ]
+    },
+    "dif_membership_organization": {
+      "issue": [
+        "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIF_Member_Individual:1.0"
+      ],
+      "granted_by": "uri:example:RuuJwd3JMffNwZ43DcJKN1:2:DIF_Member_Organization:1.4"
+    }
+  }
+}
