@@ -3,7 +3,7 @@
 
 ## Overview
 
-This guide demonstrates how to set up an end-to-end example of a Credential Trust Establishment (CTE) trust registry for the Decentralized Identity Foundation (DIF). In this scenario, DIF issues credentials to its members, and members can subsequently issue credentials to individuals. This documentation utilizes the Veramo framework for managing DIDs (Decentralized Identifiers) and issuing Verifiable Credentials.
+This guide demonstrates how to set up an end-to-end example of a Credential Trust Establishment (CTE) trust registry for the Decentralized Identity Foundation (DIF). In this scenario, DIF issues credentials to its members, and members can subsequently issue credentials to individuals. This tutorial utilizes the Veramo framework for managing DIDs (Decentralized Identifiers) and issuing Verifiable Credentials, but you may use any tool you like.
 
 ## Prerequisites
 
@@ -11,9 +11,11 @@ Ensure you have the Veramo CLI installed and properly configured. Refer to the [
 
 ## Steps for Setting Up the Trust Registry
 
-### 1. Setting Up DIDs and Keys
+### 0. Prerequisite: Setting Up DIDs and Keys
 
 #### Create a DID for DIF
+
+We'll assume that DIF uses `did:web`.
 
 ```bash
 veramo did create
@@ -65,11 +67,15 @@ curl -o did.json -H "Host: identity.foundation" http://localhost:3332/demos/samp
 
 This resulted in [DIF's sample did.json, uploaded here](https://github.com/decentralized-identity/demos/blob/main/sample_dids/dif/did.json).
 
-### 2. Repeat for Sample Organization
+#### Repeat for Sample Organization
 
 Repeat the above steps to create a DID for a member organization, resulting in [Sample Org's did.json file](https://github.com/decentralized-identity/demos/blob/main/sample_dids/sample_org/did.json).
 
-### 3. Setting Up the Trust Registry
+#### Repeat for the Organization's Employee
+
+Repeat the above steps, but this time, we'll use `did:ethr`. You may use any DID method you like, but it's helpful to keep in mind that you can use different DID methods. 
+
+### 1. Set Up the Trust Registry
 
 A trust registry defines the roles and rules for credential issuance within the ecosystem. Adapting the [Credential Trust Establishment](https://identity.foundation/credential-trust-establishment/) example to use our DIDs created above results in the following `participants`; note that we're re-using `schemas` and `roles` from that example:
 
@@ -111,7 +117,7 @@ name": "Sample Organization",
 
 [See the resulting governance file.](https://raw.githubusercontent.com/decentralized-identity/demos/main/sample_governance/dif_governance.json)
 
-### 4. Issuing Credentials
+### 2. Issue Credentials
 
 #### Issue a Credential from DIF to a Member Organization
 
@@ -180,7 +186,7 @@ veramo credential create
 ? Subject DID did:ethr:0x0232c23a85049404480dac15519bfc74d36b2f6afad1dff7400fb2d09b6423c7fc
 ```
 
-### 5. Verifying Credentials
+### 3. Verify Credentials
 
 Verification of issued credentials is crucial to ensure their authenticity and validity. Using Veramo, you can verify credentials easily.
 
