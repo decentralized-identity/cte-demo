@@ -18,7 +18,7 @@
     {
       "id": "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIFMemberIndividual:1.0",
       "name": "DIF Individual Member",
-      "issuer_roles": ["dif", "DIFMemberorganization"]
+      "issuer_roles": ["dif", "dif_member_organization"]
     }
   ],
   "participants": {
@@ -48,7 +48,7 @@
         ],
         "did:web:identity.foundation:cte-demo:sample_dids:sample_org": {
           "start": "2024-06-21T23:12:19Z",
-          "role": "DIFMemberorganization"
+          "role": "dif_member_organization"
         }
       }
     }
