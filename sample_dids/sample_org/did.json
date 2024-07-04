@@ -1,37 +1,35 @@
 {
-   "@context":[
-      "https://www.w3.org/ns/did/v1",
-      "https://w3id.org/security/v2",
-      "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
-      "https://w3id.org/security/suites/ed25519-2018/v1"
-   ],
-   "id":"did:web:identity.foundation:demos:sample_dids:sample_org",
-   "verificationMethod":[
-      {
-         "id":"did:web:identity.foundation:demos:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
-         "type":"EcdsaSecp256k1VerificationKey2019",
-         "controller":"did:web:identity.foundation:demos:sample_dids:sample_org",
-         "publicKeyHex":"04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918"
-      },
-      {
-         "id":"did:web:identity.foundation:demos:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02",
-         "type":"Ed25519VerificationKey2018",
-         "controller":"did:web:identity.foundation:demos:sample_dids:sample_org",
-         "publicKeyBase58":"HR83QdhBj5xEs9gGhYUKQTHDzJHWxD93ShSFHBcKypEu"
-      }
-   ],
-   "authentication":[
-      "did:web:identity.foundation:demos:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
-      "did:web:identity.foundation:demos:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
-   ],
-   "assertionMethod":[
-      "did:web:identity.foundation:demos:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
-      "did:web:identity.foundation:demos:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
-   ],
-   "keyAgreement":[
-      "did:web:identity.foundation:demos:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
-   ],
-   "service":[
-      
-   ]
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/v2",
+    "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
+    "https://w3id.org/security/suites/ed25519-2018/v1"
+  ],
+  "id": "did:web:identity.foundation:cte-demo:sample_dids:sample_org",
+  "verificationMethod": [
+    {
+      "id": "did:web:identity.foundation:cte-demo:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "controller": "did:web:identity.foundation:cte-demo:sample_dids:sample_org",
+      "publicKeyHex": "04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918"
+    },
+    {
+      "id": "did:web:identity.foundation:cte-demo:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02",
+      "type": "Ed25519VerificationKey2018",
+      "controller": "did:web:identity.foundation:cte-demo:sample_dids:sample_org",
+      "publicKeyBase58": "HR83QdhBj5xEs9gGhYUKQTHDzJHWxD93ShSFHBcKypEu"
+    }
+  ],
+  "authentication": [
+    "did:web:identity.foundation:cte-demo:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
+    "did:web:identity.foundation:cte-demo:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
+  ],
+  "assertionMethod": [
+    "did:web:identity.foundation:cte-demo:sample_dids:sample_org#04870b4ad13abbddf6309150d548c9c81a21ed951c4dadd8b96367ee068d5464319557e37be265586460abbcb1b11ec61cf6a60c1819ffe20aff34b5bb7af2d918",
+    "did:web:identity.foundation:cte-demo:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
+  ],
+  "keyAgreement": [
+    "did:web:identity.foundation:cte-demo:sample_dids:sample_org#f3e8e46085e4987af6f48977030830b1123e76439cd35b023b16c13643dbac02"
+  ],
+  "service": []
 }

@@ -23,30 +23,30 @@
   ],
   "participants": {
     "id": "6af6684c-28ad-41a7-8661-8823bd74314c",
-    "author": "did:web:identity.foundation:demos:sample_dids:dif",
+    "author": "did:web:identity.foundation:cte-demo:sample_dids:dif",
     "created": "2024-06-21T23:12:19Z",
     "version": 1,
     "entries": {
       "https://identity.foundation/description.schema.json": {
-        "did:web:identity.foundation:demos:sample_dids:dif": {
+        "did:web:identity.foundation:cte-demo:sample_dids:dif": {
           "name": "Decentralized Identity Foundation",
           "website": "https://identity.foundation/",
           "email": "membership@identity.foundation"
         },
-        "did:web:identity.foundation:demos:sample_dids:sample_org": {
+        "did:web:identity.foundation:cte-demo:sample_dids:sample_org": {
           "name": "Sample Organization",
           "website": "https://example.com/",
           "email": "contact@example.com"
         }
       },
       "https://identity.foundation/roles.schema.json": {
-        "did:web:identity.foundation:demos:sample_dids:dif": [
+        "did:web:identity.foundation:cte-demo:sample_dids:dif": [
           {
             "start": "2024-06-21T23:12:19Z",
             "role": "dif"
           }
         ],
-        "did:web:identity.foundation:demos:sample_dids:sample_org": {
+        "did:web:identity.foundation:cte-demo:sample_dids:sample_org": {
           "start": "2024-06-21T23:12:19Z",
           "role": "dif_member_organization"
         }
