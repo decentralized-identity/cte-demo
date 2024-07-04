@@ -13,7 +13,7 @@
     {
       "id": "uri:example:RuuJwd3JMffNwZ43DcJKN1:2:DIFMemberOrganization:1.4",
       "name": "DIF Member Organization",
-      "issuer_roles": ["dif"]
+      "issuer_roles": ["dif_member_organization"]
     },
     {
       "id": "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIFMemberIndividual:1.0",
@@ -60,7 +60,7 @@
         "uri:example:4CLG5pU5v294VdkMWxSByu:2:DIFMemberIndividual:1.0"
       ]
     },
-    "dif_membership_organization": {
+    "dif_member_organization": {
       "issue": ["uri:example:4CLG5pU5v294VdkMWxSByu:2:DIFMemberIndividual:1.0"],
       "granted_by": "uri:example:RuuJwd3JMffNwZ43DcJKN1:2:DIFMemberOrganization:1.4"
     }
