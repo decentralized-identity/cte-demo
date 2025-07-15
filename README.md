@@ -1,9 +1,25 @@
-
 # DIF Member Credentials and Credential Trust Establishment
 
 ## Overview
 
-This guide demonstrates how to set up an end-to-end example of a Credential Trust Establishment (CTE) trust registry for the Decentralized Identity Foundation (DIF). In this scenario, DIF issues credentials to its members, and members can subsequently issue credentials to individuals. This tutorial utilizes the Veramo framework for managing DIDs (Decentralized Identifiers) and issuing Verifiable Credentials, but you may use any tool you like.
+This guide demonstrates how to set up an end-to-end example of a Credential Trust Establishment (CTE) trust registry and issuing membership credentials for the Decentralized Identity Foundation (DIF). In this scenario, DIF issues credentials to its members, and members can subsequently issue credentials to individuals. This tutorial utilizes the Veramo framework for managing DIDs (Decentralized Identifiers) and issuing Verifiable Credentials, but you may use any tool you like.
+
+## Context
+
+The [CTE specification](https://identity.foundation/credential-trust-establishment/) includes an example in which the Decentralized Identity Foundation issues credentials to its members (organizations), who in turn issue credentials to their employees. This allows DIF to automatically check which participants are eligible to attend member-only events.
+
+In brief, the flow is:
+
+- The DIF is the root of trust, who authorizes members
+- Member organizations authorize individuals to represent them
+- Individuals receive a membership credential from either the organization they represent or from the DIF directly.
+
+The resulting trust registry example is shown in the CTE specification. This repository shows code samples in support of that example, including:
+
+1. Sample DID documents in `sample_dids`
+2. Sample trust registry in `sample_governance`
+3. Example steps to issue membership VCs (see tutorial below)
+4. Sample code to verify VCs issued as above in `verify-cte`
 
 ## Prerequisites
 
@@ -73,7 +89,7 @@ Repeat the above steps to create a DID for a member organization, resulting in [
 
 #### Repeat for the Organization's Employee
 
-Repeat the above steps, but this time, we'll use `did:ethr`. You may use any DID method you like, but it's helpful to keep in mind that you can use different DID methods. 
+Repeat the above steps, but this time, we'll use `did:ethr`. You may use any DID method you like, but it's helpful to keep in mind that you can use different DID methods.
 
 ### 1. Set Up the Trust Registry
 
