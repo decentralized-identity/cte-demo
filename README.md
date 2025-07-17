@@ -14,6 +14,8 @@ In brief, the flow is:
 - Member organizations authorize individuals to represent them
 - Individuals receive a membership credential from either the organization they represent or from the DIF directly.
 
+<img width="619" height="311" alt="Overview of flow" src="https://github.com/user-attachments/assets/c5a767d9-01d1-430d-8a18-b70f611ee0e6" />
+
 The resulting trust registry example is shown in the CTE specification. This repository shows code samples in support of that example, including:
 
 1. Sample DID documents in `sample_dids`
